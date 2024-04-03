@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Run Script') {
+            steps {
+                // Grant execute permission to hello.sh
+                sh 'chmod +x hello.sh'
+                // Run hello.sh script
+                sh './hello.sh'
+            }
+        }
+    }
+    
+    post {
+        always {
+            echo 'Pipeline execution complete.'
+        }
+    }
+}
