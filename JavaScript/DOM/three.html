@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style ="background-color: black; color:white">
+    <script>
+        const x = document.createElement('div')
+        console.log(x);
+        x.className = "main"
+        x.id = '2'
+        x.setAttribute("title" , "generated title")
+        x.style.backgroundColor = "yellow"
+        x.style.color= 'green'
+        x.style.padding = "12px"
+        x.innerText = "RichieRich"
+        // still everything is in memory
+        // to attach  everything in body
+        document.body.appendChild(x)
+    </script>
+</body>
+</html>
